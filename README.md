@@ -53,6 +53,9 @@ To run this project locally, you need the following tools and libraries:
 
 - **Python 3.11 (or lower)** ([Python 3.11.9](https://www.python.org/downloads/release/python-3119/) preferred)
 - Necessary Python libraries listed in the `requirements.txt` file.
+- Download these additional files after cloning the repository by following the folder structure given at the bottom:
+    - `plant_disease_model.pth`: (Plant Disease Model to be placed inside `models` folder) [Download Link](https://drive.google.com/file/d/1suOVoZSw5yaDwKZqNe3XxwTklQrXYyBG/view?usp=sharing)
+    - `New Plant Diseases Dataset(Augmented)` folder: (Plant Disease Dataset to be placed inside `Data` folder) [Download Link](https://drive.google.com/drive/folders/1MaPU1utHu3E6CMo6c09qdDma4ueQ15mz?usp=sharing)
 
 ## Setup
 
@@ -67,7 +70,7 @@ cd PrecisionAgriculture
 python -m venv myenv
 myenv/Scripts/activate
 ```
-**Note:** If you have more than one Python version installed on your system (check using `where python` command), you should first check the current version of Python runnning before creating virtual environment (check using `python --version` command). If it is not running Python 3.11.9, do the following:
+**❗Note:** If you have more than one Python version installed on your system (check using `where python` command), you should first check the current version of Python runnning before creating virtual environment (check using `python --version` command). If it is not running Python 3.11.9, do the following:
 
 - Go to the file path as seen while executing `where python` command for Python 3.11.9 version (it will be as C:\Program Files\Python311), right click on `python.exe` file, and click on `Copy as path` option.
 - Then, execute the following command to create virtual environment using Python 3.11.9 version.
@@ -92,3 +95,56 @@ To start the application, run the following command:
 ```bash
 python app.py
 ```
+
+## Folder Structure
+
+```bash
+.
+└── PrecisionAgriculture/
+    ├── Data/
+    │   ├── New Plant Diseases Dataset(Augmented)/
+    │   │   ├── train/
+    │   │   │   └── 38 folders
+    │   │   └── valid/
+    │   │       └── 38 folders
+    │   ├── test/
+    │   │   └── 33 images
+    │   ├── Crop_recommendation.csv
+    │   └── fertilizer.csv
+    ├── models/
+    │   ├── plant_disease_model.pth
+    │   ├── plant_disease_model_v2.pth (optional)
+    │   ├── RandomForest.pkl (optional)
+    │   └── RandomForest_v2.pkl
+    ├── Project-docs/
+    │   └── System-Architecture-final.jpg, App-snaps, etc.
+    ├── static/
+    │   ├── css/
+    │   │   └── style.css
+    │   ├── images/
+    │   │   └── 12 images
+    │   └── scripts/
+    │       └── cities.js
+    ├── templates/
+    │   └── 17 html files
+    ├── utils/
+    │   ├── disease.py
+    │   ├── fertilizer.py
+    │   └── model.py
+    ├── .gitignore
+    ├── app.py
+    ├── config.py
+    ├── Credentials.txt
+    ├── database.db
+    ├── Procfile
+    ├── README.md
+    ├── requirements.txt
+    ├── Train_Crop.py
+    ├── Train_Disease.py
+    └── View_Crop.py
+```
+
+## Acknowledgements
+
+1. **Tree**: For generating ASCII folder structure diagrams. [Link](https://tree.nathanfriend.com/)
+2. **Readme.so**: For generating the README file. [Link](https://readme.so/)
