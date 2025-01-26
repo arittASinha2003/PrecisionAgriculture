@@ -8,6 +8,7 @@ from wtforms.validators import InputRequired, Length, ValidationError
 from flask_wtf import FlaskForm
 from flask_bcrypt import Bcrypt
 from datetime import datetime
+import os
 import requests
 import numpy as np
 import pandas as pd
@@ -411,4 +412,4 @@ def reg():
 
 if __name__ == "__main__":
     # app.run(debug=True,port=8000)
-    app.run()
+    app.run(debug=False, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
