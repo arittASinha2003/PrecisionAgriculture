@@ -126,7 +126,23 @@ python app.py
     │   └── scripts/
     │       └── cities.js
     ├── templates/
-    │   └── 17 html files
+    │   ├── aboutus.html
+    │   ├── admindashboard.html
+    │   ├── adminlogin.html
+    │   ├── base.html
+    │   ├── contact.html
+    │   ├── crop.html
+    │   ├── crop-result.html
+    │   ├── dashboard.html
+    │   ├── disease.html
+    │   ├── disease-result.html
+    │   ├── fertilizer.html
+    │   ├── fertilizer-result.html
+    │   ├── index.html
+    │   ├── login.html
+    │   ├── reg.html
+    │   ├── signup.html
+    │   └── try_again.html
     ├── utils/
     │   ├── disease.py
     │   ├── fertilizer.py
