@@ -96,18 +96,28 @@
     <div class="container p-4">
         <form class="text-uppercase font-weight-bold" method="POST" action="{{ url_for('fert_recommend')}}">
             <div class="form-group">
-                <label for="exampleInputEmail1">Nitrogen</label>
-                <input type="number" class="form-control" name="nitrogen" id="Nitrogen" aria-describedby="emailHelp" placeholder="Enter the value (in lb/acre)">
+                <label for="exampleInputEmail1">Nitrogen (N)</label>
+                <input type="number" class="form-control" name="nitrogen" id="Nitrogen" aria-describedby="emailHelp" placeholder="Enter the value (in lb/acre)" min="0">
             </div>
 
             <div class="form-group">
-                <label for="exampleInputEmail1">Phosphorous</label>
-                <input type="number" class="form-control" name="phosphorous" id="Phosphorous" aria-describedby="emailHelp" placeholder="Enter the value (in lb/acre)">
+                <label for="exampleInputEmail1">Phosphorous (P)</label>
+                <input type="number" class="form-control" name="phosphorous" id="Phosphorous" aria-describedby="emailHelp" placeholder="Enter the value (in lb/acre)" min="0">
             </div>
 
             <div class="form-group">
-                <label for="exampleInputEmail1">Pottasium</label>
-                <input type="number" class="form-control" name="pottasium" id="Pottasium" aria-describedby="emailHelp" placeholder="Enter the value (in lb/acre)">
+                <label for="exampleInputEmail1">Potassium (K)</label>
+                <input type="number" class="form-control" name="potassium" id="Potassium" aria-describedby="emailHelp" placeholder="Enter the value (in lb/acre)" min="0">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">PH</label>
+                <input type="number" class="form-control" name="ph" id="PH" aria-describedby="emailHelp" placeholder="Enter the value" step="0.1" min="0" max="14">
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputEmail1">Soil Moisture (SM)</label>
+                <input type="number" class="form-control" name="sm" id="SM" aria-describedby="emailHelp" placeholder="Enter the value" min="0">
             </div>
 
             <div class="form-group">
