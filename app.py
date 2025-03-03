@@ -370,10 +370,32 @@ def fert_recommend():
 
     # Bar graph for nutrient requirements
     fig, ax = plt.subplots()
-    ax.bar(['N', 'P', 'K', 'pH', 'SM'], [nr, pr, kr, phr, smr], color=['red', 'green', 'blue', 'orange', 'yellow'])
-    ax.set_title(f'Nutrient Requirements for {crop_name}')
+    # ax.bar(['N', 'P', 'K', 'pH', 'SM'], [nr, pr, kr, phr, smr], color=['red', 'green', 'blue', 'orange', 'yellow'])
+    # ax.set_title(f'Nutrient Requirements for {crop_name}')
+    # ax.set_xlabel('Nutrients / Factors')
+    # ax.set_ylabel('Required Value')
+
+    # Define positions for the bars
+    bar_width = 0.35  # Width of the bars
+    index = ['N', 'P', 'K', 'pH', 'SM']  # Nutrient labels
+    
+    # Positioning for the required values and entered values
+    bar_positions = range(len(index))
+    required_values = [nr, pr, kr, phr, smr]  # Required values from the dataset
+    entered_values = [N, P, K, pH, SM]  # Entered values from the form
+
+    # Plot the bars for the required values
+    ax.bar([pos - bar_width / 2 for pos in bar_positions], required_values, bar_width, label='Required', color='green')
+    # Plot the bars for the entered values
+    ax.bar([pos + bar_width / 2 for pos in bar_positions], entered_values, bar_width, label='Entered', color='yellow')
+
+    # Set labels and title
+    ax.set_title(f'Nutrient Requirements vs Entered Values for {crop_name}')
     ax.set_xlabel('Nutrients / Factors')
-    ax.set_ylabel('Required Value')
+    ax.set_ylabel('Values')
+    ax.set_xticks(bar_positions)
+    ax.set_xticklabels(index)
+    ax.legend()
 
     # Convert the matplotlib figure to HTML
     img_stream = io.BytesIO()
