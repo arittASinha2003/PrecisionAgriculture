@@ -22,7 +22,7 @@ Farming is one of the major sectors that influences a country’s economic growt
 
 ## Home Page of our Web Application
 
-![Home Page of our Web Application](https://github.com/arittASinha2003/PrecisionAgriculture/blob/main/Project-docs/App%20Snaps/Home.png)
+![Home Page of our Web Application](https://github.com/arittASinha2003/PrecisionAgriculture/blob/main/Project%20Docs/App%20Snaps/Home.png)
 
 ## How to Use 💻
 
