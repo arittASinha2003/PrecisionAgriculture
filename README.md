@@ -1,4 +1,4 @@
-# Precision Agriculture using Machine Learning and IOT
+# Precision Agriculture using Machine Learning
 
 ## Data Source 📊
 
@@ -10,42 +10,27 @@
 
 Farming is one of the major sectors that influences a country’s economic growth.
 
-- In country like India, majority of the population is dependent on agriculture for their livelihood. Many new technologies, such as Machine Learning and Deep Learning, are being implemented into agriculture so that it is easier for farmers to grow and maximize their yield.
+- In a country like India, most of the population depends on agriculture for their livelihood. Many new technologies, such as machine learning and deep learning, are being implemented in agriculture to make it easier for farmers to grow and maximize their yield.
 
-- In this project, I present a website in which the following applications are implemented; Crop recommendation, Fertilizer recommendation and Plant disease prediction, respectively.
+- In this project, I present a website on which the following applications are implemented: Crop recommendation, fertilizer recommendation, and plant disease prediction, respectively.
 
-- In the crop recommendation application, the user can provide the soil data from their side and the application will predict which crop should the user grow.
+- In the crop recommendation application, the user can provide the soil data from their side, and the application will predict which crop the user should grow.
 
-- For the fertilizer recommendation application, the user can input the soil data and the type of crop they are growing, and the application will predict what the soil lacks or has excess of and will recommend improvements.
+- For the fertilizer recommendation application, the user can input the soil data and the type of crop they are growing, and the application will predict what the soil lacks or has an excess of and recommend improvements.
 
-- For the last application, that is the plant disease prediction application, the user can input an image of a diseased plant leaf, and the application will predict what disease it is and will also give a little background about the disease and suggestions to cure it.
-
-## Contributors
-
-- [Atharva Labhasetwar](https://www.linkedin.com/in/atharva-labhasetwar)
-
-- [Venkata Narayana Bommanaboina](https://www.linkedin.com/in/bvnarayana515739/)
-
-- [Kundan Patil](https://www.linkedin.com/in/kundan-patil-638979199)
-
-- [GitHub Reference](https://github.com/atharval1/precision-agriculture-using-machine-learning)
+- For the last application, the plant disease prediction application, the user can input an image of a diseased plant leaf, and the application will predict what disease it is. It will also provide some background and suggestions for curing the disease.
 
 ## Home Page of our Web Application
 
-![Home Page of our Web Application](https://github.com/atharval1/precision-agriculture-using-machine-learning/blob/main/Project-docs/App-snaps/Home.png)
+![Home Page of our Web Application](https://github.com/arittASinha2003/PrecisionAgriculture/blob/main/Project-docs/App%20Snaps/Home.png)
 
 ## How to Use 💻
 
-- Crop Recommendation System ==> Enter the corresponding nutrient values of your soil, state and city. Note that, the N-P-K (Nitrogen-Phosphorous-Pottasium) values to be entered should be the ratio between them. Refer this website for more information. Note: When you enter the city name, make sure to enter mostly common city names. Remote cities/towns may not be available in the Weather API from where humidity, temperature data is fetched.
+- Crop Recommendation System ==> Enter the corresponding nutrient values of your soil, state, and city. Note that the N-P-K (Nitrogen-Phosphorous-Pottasium) values to be entered should be the ratio between them. Refer to this website for more information. Note: When you enter the city name, make sure to enter common city names. Remote cities/towns may not be available in the Weather API from where humidity and temperature data is fetched.
 
-- Fertilizer Suggestion System ==> Enter the nutrient contents of your soil and the crop you want to grow. The algorithm will tell which nutrient the soil has excess of or lacks. Accordingly, it will give suggestions for buying fertilizers.
+- Fertilizer Suggestion System ==> Enter the nutrient contents of your soil and the crop you want to grow. The algorithm will tell which nutrient the soil has an excess of or lacks. Accordingly, it will give suggestions for buying fertilizers.
 
-- Disease Detection System ==> Upload an image of leaf of your plant. The algorithm will tell the crop type and whether it is diseased or healthy. If it is diseased, it will tell you the cause of the disease and suggest you how to prevent/cure the disease accordingly. Note that, for now it only supports few crops.
-
-## How to Run the Project
-
-- [Demo](https://youtu.be/kU0nf-rzusE)
-- [Walkthrough](https://youtu.be/eJ-KytG2H5w)
+- Disease Detection System ==> Upload an image of a leaf of your plant. The algorithm will tell the crop type and whether it is diseased or healthy. If it is diseased, it will tell you the cause of the disease and suggest how to prevent/cure it accordingly. Note that, for now, it only supports a few crops.
 
 ## Requirements
 
@@ -53,34 +38,42 @@ To run this project locally, you need the following tools and libraries:
 
 - **Python 3.11 (or lower)** ([Python 3.11.9](https://www.python.org/downloads/release/python-3119/) preferred)
 - Necessary Python libraries listed in the `requirements.txt` file.
-- Download these additional files after cloning the repository by following the folder structure given at the bottom:
-    - `plant_disease_model.pth`: (Plant Disease Model to be placed inside `models` folder) [Download Link](https://drive.google.com/file/d/1suOVoZSw5yaDwKZqNe3XxwTklQrXYyBG/view?usp=sharing)
-    - `New Plant Diseases Dataset(Augmented)` folder: (Plant Disease Dataset to be placed inside `Data` folder) [Download Link](https://drive.google.com/drive/folders/1MaPU1utHu3E6CMo6c09qdDma4ueQ15mz?usp=sharing)
+- Download these additional files (optional) after cloning the repository by following the folder structure given at the bottom:
+    - `plant_disease_model.pth`: (Plant Disease Model to be placed inside `models` folder) [Download Link](https://drive.google.com/file/d/1suOVoZSw5yaDwKZqNe3XxwTklQrXYyBG/view?usp=sharing) (❌ Not Required ❌)
+    - `New Plant Diseases Dataset(Augmented)` folder: (Plant Disease Dataset to be placed inside `Data` folder) [Download Link](https://drive.google.com/drive/folders/1MaPU1utHu3E6CMo6c09qdDma4ueQ15mz?usp=sharing) (❗Only required if you want to retrain the model❗)
 
 ## Setup
 
 ### 1. Clone the Repository
 ```bash
 git clone https://github.com/arittASinha2003/PrecisionAgriculture.git
+```
+```bash
 cd PrecisionAgriculture
 ```
 
 ### 2. Creating Virtual Environment (Recommended, but Optional)
 ```bash
 python -m venv myenv
+```
+```bash
 myenv/Scripts/activate
 ```
-**❗Note:** If you have more than one Python version installed on your system (check using `where python` command), you should first check the current version of Python runnning before creating virtual environment (check using `python --version` command). If it is not running Python 3.11.9, do the following:
+**❗Note:** If you have more than one Python version installed on your system (check using the `where python` command), you should first check the current version of Python running before creating a virtual environment (check using the `python --version` command). If it is not running Python 3.11.9, do the following:
 
-- Go to the file path as seen while executing `where python` command for Python 3.11.9 version (it will be as C:\Program Files\Python311), right click on `python.exe` file, and click on `Copy as path` option.
-- Then, execute the following command to create virtual environment using Python 3.11.9 version.
+- Go to the file path as seen while executing the `where python` command for Python 3.11.9 version (it will be as C:\Program Files\Python311), right-click on the `python.exe` file and click on the `Copy as path` option.
+- Then, execute the following command to create a virtual environment using the Python 3.11.9 version.
 ```bash
 "C:\Program Files\Python311\python.exe" -m venv myenv
+```
+```bash
 myenv/Scripts/activate
 ```
 or, for Powershell:
 ```bash
 & "C:\Program Files\Python311\python.exe" -m venv myenv
+```
+```bash
 myenv/Scripts/activate
 ```
 
@@ -162,5 +155,6 @@ python app.py
 
 ## Acknowledgements
 
-1. **Tree**: For generating ASCII folder structure diagrams. [Link](https://tree.nathanfriend.com/)
-2. **Readme.so**: For generating the README file. [Link](https://readme.so/)
+1. **[Tree](https://tree.nathanfriend.com/)**: For generating ASCII folder structure diagrams.
+2. **[Readme.so](https://readme.so/)**: For generating the README file.
+3. **[GitHub Reference](https://github.com/atharval1/precision-agriculture-using-machine-learning)**
